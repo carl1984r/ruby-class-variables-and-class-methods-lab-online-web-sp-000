@@ -29,7 +29,8 @@ class Song
   end
 
   def self.genre_count
-    @@genres
+    bb = {}
+    bb.keys << @@genres.uniq
   end
 
   def self.artist_count
