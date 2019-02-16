@@ -29,9 +29,7 @@ class Song
   end
 
   def self.genre_count
-    bb = {}
-    @@genres.each {|x| bb << bb[@@genres] = @@genres.count}
-    bb
+    @@genres.group_by{|a| a}.map{|a, b| [a, b.length]}.to_h
   end
 
   def self.artist_count
