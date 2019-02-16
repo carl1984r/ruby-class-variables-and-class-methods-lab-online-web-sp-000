@@ -30,7 +30,7 @@ class Song
 
   def self.genre_count
     bb = {}
-    bb.keys << @@genres.uniq
+    @@genres.each {|x| bb << bb[@@genres] = @@genres.count}
     bb
   end
 
